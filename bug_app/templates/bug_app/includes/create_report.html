@@ -1,0 +1,15 @@
+<div class="go_back">
+    <a href="{% url 'appList' %}">Go back to homepage</a>
+</div>
+    
+<div class="new_password_title">
+    <h1>New Bug Report</h1>
+</div>
+    
+<div class="password_form">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+    <input type="submit" value="Create Report">
+    </form>
+</div>

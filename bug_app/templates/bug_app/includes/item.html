@@ -1,0 +1,24 @@
+<div class="item">
+    <table style="border-spacing: 60px 30px;">
+        {% if bug %}
+        {% for bug_item in bug %}
+        <div class="row_item">
+            <tr>
+                    <td>{{ bug_item.title }}</td>
+                    <td><span>{{ bug_item.description | truncatechars:50 }}</span></td>
+                    {% if bug_item.complete %}
+                    <td>Completed</td>
+                    {% else %}
+                    <td>In Progress</td>
+                    {% endif %}
+                    <td>{{ bug_item.user }}</td>
+                    <td>{{ bug_item.created }}</td>
+                    <td><a href="{% url 'appDetail' bug_item.id %}">View</a></td>
+            </tr>
+        </div>
+        {% endfor %}
+        {% else %}
+        <td>No bugs are present</td>
+        {% endif %}
+    </table>
+    </div>

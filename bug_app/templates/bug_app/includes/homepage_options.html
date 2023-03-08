@@ -1,0 +1,22 @@
+<div>
+    {% if request.user.is_authenticated %}
+    <p>WELCOME {{ request.user|upper }}!</p>
+    <a href="{% url 'logout' %}">LOGOUT</a>
+{% else %}
+    <a href="{% url 'login' %}">LOGIN</a>
+{% endif %}
+</div>
+
+<div>
+    <h1>Bug Tracker</h1>
+</div>
+
+<div>
+    {% if user.is_superuser %}
+        <p><a href="/admin">Database</a></p>
+    {% endif %}
+</div>
+
+<div>
+    <p><a href="{% url 'appCreate' %}">Create new bug report</a></p>
+</div>
