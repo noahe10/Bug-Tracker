@@ -1,22 +1,28 @@
-<div>
-    {% if request.user.is_authenticated %}
-    <p>WELCOME {{ request.user|upper }}!</p>
-    <a href="{% url 'logout' %}">LOGOUT</a>
-{% else %}
-    <a href="{% url 'login' %}">LOGIN</a>
-{% endif %}
-</div>
+<div class="navbar">
+    <div class="navbar_items">
+        <h1><a href="{% url 'appList' %}">Bug Tracker</a></h1>
+    </div>
 
-<div>
-    <h1>Bug Tracker</h1>
-</div>
+    <div class="navbar_items">
+        {% if request.user.is_authenticated %}
+        <p>Welcome {{ request.user }}!</p>
+    </div>
 
-<div>
-    {% if user.is_superuser %}
-        <p><a href="/admin">Database</a></p>
-    {% endif %}
-</div>
+    <div class="navbar_items">
+        <p><a href="{% url 'appCreate' %}">Create new report</a></p>
+    </div>
 
-<div>
-    <p><a href="{% url 'appCreate' %}">Create new bug report</a></p>
+    <div class="navbar_items">
+        {% if user.is_superuser %}
+            <p><a href="/admin">Database</a></p>
+        {% endif %}
+    </div>
+
+    <div class="navbar_items">
+        <a href="{% url 'logout' %}">Logout</a>
+        {% else %}
+            <a href="{% url 'login' %}">Login</a>
+        {% endif %}
+    </div>
+
 </div>

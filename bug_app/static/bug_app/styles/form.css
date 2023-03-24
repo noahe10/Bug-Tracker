@@ -1,0 +1,91 @@
+.title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.title h1 {
+    font-size: 35px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+[type="text"] {
+    position: relative;
+    height:50px; 
+    width:450px;
+    bottom: 5px;
+    font-size: 30px;
+    top: 50px;
+    left: 210px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+ }
+
+textarea {
+    position: relative;
+    height:450px; 
+    width:850px;
+    font-size: 30px;
+    top: 90px;
+    right: 67px;
+    padding-left: 7px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 5px;
+ }
+
+ label[for="id_description"] {
+    position: relative;
+    bottom: 400px;
+    font-size: 25px;
+    left: 430px;
+  }
+
+  label[for="id_title"] {
+    position: relative;
+    left: 470px;
+  }
+
+  label[for="id_complete"] {
+    position: relative;
+    top: 80px;
+    left: 435px;
+  }
+
+  [type="checkbox"] {
+    position: relative;
+    top: 83px;
+    left: 435px;
+    height: 20px;
+    width: 20px;
+ }
+
+ [type="submit"] {
+    position: relative;
+    top: 95px;
+    left: 450px;
+    padding: 5px;
+ }
+
+ .go_back {
+    display: flex;
+    justify-content: center;
+ }
+
+ .go_back a {
+    position: relative;
+    top: 110px;
+    text-decoration: none;
+    color: black;
+ }
+
+ .go_back a:hover {
+    color: rgb(146, 146, 146);
+ }

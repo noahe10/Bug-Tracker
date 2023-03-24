@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 class Bug(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
     title = models.CharField(max_length=200)
-    description = models.TextField(max_length=300)
+    description = models.TextField(max_length=5000)
     created = models.DateTimeField(auto_now_add=True)
     complete = models.BooleanField()
 

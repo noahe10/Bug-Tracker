@@ -1,0 +1,30 @@
+.delete_confirmation {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.delete_button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+[type='submit'] {
+    padding: 5px;
+}
+
+.go_back {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.go_back a {
+    text-decoration: none;
+    color: black;
+}
+
+.go_back a:hover {
+    color: rgb(146, 146, 146); 
+}
