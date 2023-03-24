@@ -1,0 +1,53 @@
+.title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+.title h1 {
+    font-size: 35px;
+}
+
+.description {
+    display: flex;
+    justify-content: center;
+    margin: 0px 35px 20px 35px;
+}
+
+.description p {
+    text-align: center;
+}
+
+.edit_options {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.edit_options a {
+    text-decoration: none;
+    color: black;
+}
+
+.edit_options a:hover {
+    color: rgb(146, 146, 146);
+}
+
+.edit {
+    margin-right: 30px;
+}
+
+.go_back {
+    display: flex;
+    justify-content: center;
+}
+
+.go_back a {
+    text-decoration: none;
+    color: black;
+}
+
+.go_back a:hover {
+    color: rgb(146, 146, 146);
+}

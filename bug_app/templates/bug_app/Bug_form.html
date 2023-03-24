@@ -8,10 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'bug_app/styles/homepage_options.css' %}">
+    <link rel="stylesheet" href="{% static 'bug_app/styles/form.css' %}">
 {% endblock %}
 
 {% block content %}
 
-    {% include 'bug_app/includes/create_report.html' %}
+    {% include 'bug_app/includes/homepage_options.html' %}
+
+    <div class="main">
+        {% include 'bug_app/includes/create_report.html' %}
+    </div>
 
 {% endblock %}

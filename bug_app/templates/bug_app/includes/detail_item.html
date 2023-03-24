@@ -1,23 +1,25 @@
-<div>
-    <p><a href="{% url 'appList' %}">Go back</a></p>
-</div>
-
-<div>
+<div class="title">
     <h1>{{ bug.title }}</h1>
 </div>
 
-<div>
+<div class="description">
     <p>{{ bug.description }}</p>
 </div>
 
-<div>
-    {% if request.user == bug.user or user.is_superuser %}
-        <a href="{% url 'appUpdate' bug.id %}">Edit</a>
-    {% endif %}
+<div class="edit_options">
+    <div class="edit">
+        {% if request.user == bug.user or user.is_superuser %}
+            <a href="{% url 'appUpdate' bug.id %}">Edit</a>
+        {% endif %}
+    </div>
+
+    <div class="delete">
+        {% if user.is_superuser %}
+        <a href="{% url 'appDelete' bug.id %}">Delete</a>
+        {% endif %}
+    </div>
 </div>
 
-<div>
-    {% if user.is_superuser %}
-    <a href="{% url 'appDelete' bug.id %}">Delete</a>
-    {% endif %}
+<div class="go_back">
+    <p><a href="{% url 'appList' %}">Go Back</a></p>
 </div>

@@ -1,7 +1,3 @@
-<div class="go_back">
-    <a href="{% url 'appList' %}">Go back to homepage</a>
-</div>
-
 <div class="delete_confirmation">
     <h1>Are you sure you want to remove {{ bug.title }} from the tracker?</h1>
 </div>
@@ -11,4 +7,8 @@
         {% csrf_token %}
         <input type="submit" value="Delete">
     </form>
+</div>
+
+<div class="go_back">
+    <a href="{% url 'appList' %}">Go back to homepage</a>
 </div>
